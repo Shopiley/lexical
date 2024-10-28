@@ -30,7 +30,7 @@ import {isEmptyParagraph, transformersByType} from './utils';
  */
 export function createMarkdownExport(
   transformers: Array<Transformer>,
-  shouldPreserveNewLines: boolean = false,
+  shouldPreserveNewLines: boolean = true,
 ): (node?: ElementNode) => string {
   const byType = transformersByType(transformers);
   const elementTransformers = [...byType.multilineElement, ...byType.element];

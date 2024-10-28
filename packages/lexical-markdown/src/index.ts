@@ -84,8 +84,8 @@ function $convertFromMarkdownString(
   markdown: string,
   transformers: Array<Transformer> = TRANSFORMERS,
   node?: ElementNode,
-  shouldPreserveNewLines = false,
-  shouldMergeAdjacentLines = false,
+  shouldPreserveNewLines = true,
+  shouldMergeAdjacentLines = true,
 ): void {
   const sanitizedMarkdown = shouldPreserveNewLines
     ? markdown
@@ -103,7 +103,7 @@ function $convertFromMarkdownString(
 function $convertToMarkdownString(
   transformers: Array<Transformer> = TRANSFORMERS,
   node?: ElementNode,
-  shouldPreserveNewLines: boolean = false,
+  shouldPreserveNewLines: boolean = true,
 ): string {
   const exportMarkdown = createMarkdownExport(
     transformers,

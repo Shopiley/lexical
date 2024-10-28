@@ -22,7 +22,7 @@ export const DEFAULT_SETTINGS = {
   isMaxLength: false,
   isRichText: true,
   measureTypingPerf: false,
-  shouldPreserveNewLinesInMarkdown: false,
+  shouldPreserveNewLinesInMarkdown: true,
   shouldUseLexicalContextMenu: false,
   showNestedEditorTreeView: false,
   showTableOfContents: false,

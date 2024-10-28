@@ -46,7 +46,7 @@ type TextFormatTransformersIndex = Readonly<{
  */
 export function createMarkdownImport(
   transformers: Array<Transformer>,
-  shouldPreserveNewLines = false,
+  shouldPreserveNewLines = true,
 ): (markdownString: string, node?: ElementNode) => void {
   const byType = transformersByType(transformers);
   const textFormatTransformersIndex = createTextFormatTransformersIndex(
